@@ -4,13 +4,13 @@
 		<title></title>
 	</head>
 	<body>
-		<h1>Using Data Types with DOM</h1>
+		<h1 id="display">Hello my name is</h1>
 
 		<!-- INTERNAL -->
 		<script>
-			var custName = prompt();
+			var custName = prompt("Enter name");
 
-			document.body.innerHTML = custName;
+			document.getElementById("display").innerHTML = custName
 
 		</script>
 	</body>
