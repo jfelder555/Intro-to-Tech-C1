@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>Fruits</h1>
+		<p id="display"></p>
+		
+		<input type="button" value="Enter new fruit" onclick="getFruit()">
+
+		<script>
+			var fruits = ["apple", "orange", "kiwi"];
+			function getFruit(){
+				var pop = prompt("Enter your favorite fruit").toLowerCase();
+				fruits.push(pop);
+				fruits.sort();
+				document.getElementById("display").innerHTML = fruits.join(" with ");			
+
+			}
+
+		</script>
+	</body>
+</html>
