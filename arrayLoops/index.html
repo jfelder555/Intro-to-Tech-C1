@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<ul id="display"></ul>
+
+		<script>
+
+			var color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+			var o = ["th", "st", "nd", "rd"];
+
+			for(var i = 0; i < color.length; i++){
+				var li = document.createElement("li");
+				if(i < 3){
+					li.innerHTML = (i + 1) + o[i+1] + " choice is " + color[i];
+				}else{
+					li.innerHTML = (i + 1) + o[0] + " choice is " + color[i];	
+				}
+				document.getElementById("display").appendChild(li);
+			}
+		</script>
+	</body>
+</html>
