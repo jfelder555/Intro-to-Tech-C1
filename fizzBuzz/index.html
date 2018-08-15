@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h3 id="display"></h3>
+		<script>
+			var count = 1;
+			while(count <= 100){
+			if(count % 5 == 0 && count % 3 == 0){
+				document.getElementById("display").innerHTML += " FizzBuzz " + "<br>";
+			}
+			else if(count % 5 == 0){
+				document.getElementById("display").innerHTML += " Buzz " + "<br>";
+			}
+			else if(count % 3 == 0){
+				document.getElementById("display").innerHTML += " Fizz " + "<br>";
+			} else{
+			document.getElementById("display").innerHTML += count + " " + "<br>";
+		}
+				count++;
+			
+			}
+			
+		</script>
+	</body>
+</html>
