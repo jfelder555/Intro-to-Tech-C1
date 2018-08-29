@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Fetch Data</title>
+	</head>
+	<body>
+		<input id="limit" type="number" max="5000" placeholder="Enter limit" onchange="showThing()">
+		<div id="display"></div>
+		<img id="image" src="">
+		
+
+		<script>
+			function showThing(){
+				var limit = document.getElementById("limit").value;
+				var display = document.getElementById("display");
+				fetch("https://jsonplaceholder.typicode.com/photos")
+					.then(function(res){ return res.json() })
+					.then(function(data){
+						console.log(data);
+
+						display.innerHTML = "";
+
+					for(var i = 0; i < limit; i++){
+						display.innerHTML += `<h2>${data[i].title}</h2>`;
+						display.innerHTML += `<img src="${data[i].thumbnailUrl}">`;
+						display.innerHTML += `<hr>`;
+					}
+
+					})
+				} showThing()
+		</script>
+	</body>
+</html>
